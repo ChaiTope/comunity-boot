@@ -21,11 +21,11 @@ public class WebMvcConfig implements WebMvcConfigurer {
 	public void addResourceHandlers(ResourceHandlerRegistry registry) {
 		
 		//기존 resources 폴더 설정
-		registry.addResourceHandler("/resources/**")
-				.addResourceLocations("/resources/");
+//		registry.addResourceHandler("/resources/**")
+//				.addResourceLocations("/resources/");
 		
 		//static폴더 설정
-		registry.addResourceHandler("/static/**")
-				.addResourceLocations("classpath:/static");
+		registry.addResourceHandler("/**")
+				.addResourceLocations("classpath:/static/", "classpath:/resources/");
 	}
 }
